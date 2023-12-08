@@ -18,6 +18,7 @@
           <div><%= message %></div>
          <% end %>
         </div>
+
     <% end %>
 
 
@@ -39,7 +40,7 @@
 
          <%= form.password_field :password, class: "form-control",
 
-                               placeholder: "Enter your password" %>
+                  placeholder: "Enter your password" %>
 
        </div>
 
@@ -52,6 +53,25 @@
                               placeholder: "Please enter the password again" %>
 
        </div>
+
+       <div class="form-group row mt-3">
+       <%= form.label :name %>
+       <%= form.text_field :name, class: "form-control" %>
+        </div>
+
+      <div class="form-group row mt-3">
+     <%= form.label :age %>
+     <%= form.number_field :age, class: "form-control" %>
+      </div>
+ 
+    <div class="form-group row mt-3">
+      <%= form.label :bio %>
+      <%= form.text_area :bio, class: "form-control" %>
+    </div>
+ 
+    <div class="form-group row mt-3">
+   <%= form.select :status, User.statuses.keys, class: "form-control" %>
+   </div>
 
        <div class="form-group row mt-3">
 
