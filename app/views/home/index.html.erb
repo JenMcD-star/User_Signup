@@ -1,3 +1,5 @@
+home page
 
+<% user = User.find(11) %>
 
-<h1> This is the Home Page </h1>
+<%= button_to "Destroy this runner", @user, method: :delete %>
